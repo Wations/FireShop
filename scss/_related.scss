@@ -1,0 +1,36 @@
+.related{
+	background: #f2f2f2;
+	max-width: 1180px;
+	margin: 40px auto 25px auto;
+	height: 45px;
+	width:calc(100% - 40px);
+	border:green solid 1px;
+
+	.info{
+			
+			width: 100%;
+			margin: 0 auto 0 auto;
+			text-align:center;
+			position:relative;
+			top: 50%;
+			transform:translateY(-50%);
+
+			a{
+				text-decoration: none;
+				margin-bottom:15px;
+				font-size: 18px;
+				text-transform: uppercase;
+				color: grey;
+				&:hover{
+					color:green;
+				}
+				
+			}
+
+		}
+		@include mq(0, 1220px){
+			width:calc(100% - 40px);
+			margin: 40px auto 25px auto;
+		}
+
+}

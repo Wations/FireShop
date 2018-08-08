@@ -1,0 +1,125 @@
+.category{
+	max-width:1180px;
+	width:calc(100% - 40px);
+	margin:50px auto;
+	text-align:center;
+	h1{
+		font-size:30px;
+		color:black;
+		text-align:center;
+		text-transform:uppercase;
+		font-weight:bold;
+		letter-spacing:3px;
+		margin:20px auto;
+	}
+	em{
+		font-size:18px;
+		color:grey;
+		text-decoration:underline;
+		text-align:center;
+		&:hover{
+			color:green;
+		}
+	}
+	a{
+		text-align:center;
+		text-decoration: none;
+	}
+	ul{
+		
+		max-width:1180px;
+		margin:20px auto 100px auto;
+		text-align:center;
+		
+		.produtImage{
+			display: inline-block;
+			margin:0 27px;
+			text-align:center;
+			&:first-child{
+				margin-left:0;
+			}
+			&:last-child{
+				margin-right:0;
+			}
+
+			img{
+				width:210px;
+				height:260px;
+				margin:10px auto;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				&:hover{
+					transform:scale(1.1);
+				}
+			}
+
+			.nome_produto{
+				font-size:14px;
+				text-align:center;
+				color:black;
+				margin:10px auto;
+				&:hover{
+					color:green;
+				}
+			}
+			
+			.preço{
+				font-size:12px;
+				text-align:center;
+				color:black;
+			}
+
+
+		}
+
+		@include mq(791px,1220px){
+			li{
+				margin:0 55px;
+			}
+			li:last-child{
+				display:none;
+			}
+			li:nth-last-child(even){
+				margin-right:0;
+				margin-left:0;
+			}
+			
+		}
+
+		@include mq(576px,790px){
+
+			li:last-child{
+				display:none;
+			}
+			li:nth-last-child(2){
+				display:none;
+			}
+			li:nth-last-child(3){
+				margin-right:0;
+			}	
+		}
+
+		@include mq(0,575px){
+			li{
+				margin:0 auto;
+			}
+			li:first-child{
+				margin:0 auto;
+			}
+			li:last-child{
+				margin:0 auto;
+			}
+		}
+		
+	}
+	&:after{
+			content:'';
+			height:1px;
+			background: green;
+			display: block;
+			margin: 30px auto 10px auto;
+				@include mq(0, 1220px){
+				margin: 30px 20px 10px 20px;
+				}
+		}
+
+}

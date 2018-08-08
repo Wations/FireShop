@@ -1,0 +1,105 @@
+.product-info{
+	max-width: 1180px;
+	width: calc(100% - 40px);
+	margin: 40px auto 20px auto;
+	text-align:center;
+	font-size: 13px;
+	h1{	
+		font-size: 40px;
+		line-height: 1.6;
+		text-transform: uppercase;
+		color: black;
+	}
+	.article-number{
+		font-size:10px;
+		font-style:italic;
+		color:grey;
+	}
+	.cost{
+		margin:20px;
+		font-size:16px;
+		color:black;
+	}
+	.description{
+		font-size:14px;
+		font-style:italic;
+		color:grey;
+		max-width: 600px;
+		text-align: center;
+		margin: 0 auto 20px auto;
+		line-height: 1.6;
+		@include mq(0, 600px){
+			margin: 0 20px 20px 20px;
+		}
+	}
+	.size{
+		margin:20px;
+		font-size:12px;
+		color:black;
+		text-transform: uppercase;
+		font-style: bold;
+	}
+	.tamanhos{
+		max-width: 400px;
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		font-size:13px;
+		text-align: center;
+		li{
+			display: inline-block;
+			font-family: $primary-font;
+			font-size: 13px;
+			text-transform: uppercase;
+			vertical-align:middle;
+			color: black;
+			margin: 0 2px 0 2px;
+			&:hover{
+				transform:scale(1.1);
+			}
+			a{
+				color: black;
+				text-decoration: none;
+				border:1px solid green;
+				padding:10px;
+				&:hover{
+					color:green;
+				}
+			}
+
+		}
+	}
+	.add{
+			margin:60px 0;
+			text-align: center;
+
+			a{
+			border: 1px solid green;
+			text-decoration: none;
+			line-height: 45px;
+			display: inline-block;
+			text-transform: uppercase;
+			color: green;
+			padding: 0 20px 0 20px;
+			font-size: 16px;
+				&:hover{
+					background-color: grey;
+					color:green;
+					transform:scale(1.1);
+					color:white;
+				}
+			}
+		}
+
+		&:after{
+			content:'';
+			height:1px;
+			background: green;
+			display: block;
+			margin: 30px auto 10px auto;
+				
+		}
+		@include mq(0,840px){
+			margin: 20px auto 20px auto;
+		}
+}

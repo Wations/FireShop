@@ -1,0 +1,18 @@
+/*---Media Query---*/
+@mixin mq($smallerValue,$biggerValue) {
+	@media (min-width: #{$smallerValue}) and (max-width: $biggerValue) {
+   	@content;
+ 	}
+}
+
+/*  @include mq(min,max){
+	
+
+	}*/
+
+@mixin titleFont{
+	
+}
+
+
+

@@ -1,0 +1,120 @@
+.product{
+	margin: 50px auto;
+	position:relative;
+	width:calc(100% - 40px);
+	max-width:720px;
+	//overflow:hidden;
+	height:480px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	&:hover{
+		cursor:grab;
+	}
+	&:after{
+		content: '';
+    	display: block;
+	    width: 33px;
+	    height: 33px;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    background: url(./icon.png);
+	}
+	.zoomImg{
+		&:active{
+			
+			cursor: grabbing;
+		}
+	}
+	span{
+		position: absolute;
+    	top: 15px;
+    	right: 8px;
+    	color: black;
+    	transform:rotate(40deg);
+	}
+
+
+	
+
+	#imagemGrande{
+		
+		position:relative;
+		top:50%;
+		transform: translatey(-50%);
+		overflow:hidden;
+		width:720px;
+		height:480px;
+
+	}
+
+	ul{
+		bottom: 20px;
+    	right: 20px;
+    	position:absolute;
+    	z-index:1000;
+		.miniatura{
+			display: block;
+			margin-bottom:20px;
+			width:70px;
+			height:70px;
+			cursor:pointer;
+
+
+			img{
+	    		width:100%;
+	    		border:green solid 1px;
+	    		&:hover{
+	    			top:1px;
+					transform:scale(1.2);
+				}
+			}
+			a{
+				text-decoration: none;
+			}
+		}
+	}
+
+
+	@include mq(0,1040px){
+		margin:50px auto;
+		max-width:576px;
+		width:calc(100% - 40px);
+		height:384px;
+		&:after{
+			display:none;
+		}
+		#imagemGrande{
+			width:576px;
+			height:384px;
+		}
+		span{
+			display:none;
+		}
+	}
+	@include mq(0,840px){
+		margin:30px auto;
+		width:calc(100% - 40px);
+		max-width:360px;
+		height:290px;
+		&:after{
+			display:none;
+		}
+
+		#imagemGrande{
+			width:360px;
+			height:290px;	
+		}
+		ul{
+			display:none;
+		}
+		span{
+			display:none;
+		}
+		p{
+			display:none;
+		}
+	}
+
+	
+}
+

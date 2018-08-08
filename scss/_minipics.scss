@@ -1,0 +1,30 @@
+.minipics{
+	width:calc(100% - 40px);
+	display:none;
+	position:relative;
+	margin:0 auto;
+	ul{
+		text-align:center;
+		.miniatura{
+			display: inline-block;
+			width:70px;
+			height:70px;
+			margin:0 10px;
+			img{
+	    		width:100%;
+	    		border:green solid 1px;
+	    		&:hover{
+	    			top:1px;
+					transform:scale(1.2);
+				}
+			}
+			a{
+				text-decoration: none;
+			}
+		}
+	}
+	@include mq(0,840px){
+		display:block;
+
+	}
+}
